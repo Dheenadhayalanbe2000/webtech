@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Model Window" />
+    <title>Model Window</title>
+    <link rel="stylesheet" href="stylemodelwindow.css" />
+  </head>
+  <body>
+    <!-- A button that triggers the model window -->
+    <button id="open-model">Open Model</button>
+
+    <!-- The model window overlay -->
+    <div id="model" class="model">
+      <!-- The model content box -->
+      <div class="model-content">
+        <h1>HTML and CSS Window</h1>
+        <p>This windown shows the terms and conditions of the HTML and CSS</p>
+        <!-- A button that closes the model window -->
+        <button id="close-model">Close Model</button>
+      </div>
+    </div>
+
+    <!-- A script that shows and hides the model window -->
+    <script>
+      // Get the elements by id
+      var model = document.getElementById("model");
+      var openModel = document.getElementById("open-model");
+      var closeModel = document.getElementById("close-model");
+
+      // When the user clicks on the open button, show the model window
+      openModel.onclick = function () {
+        model.style.display = "block";
+      };
+
+      // When the user clicks on the close button, hide the model window
+      closeModel.onclick = function () {
+        model.style.display = "none";
+      };
+
+      // When the user clicks anywhere outside of the model window, hide it
+      window.onclick = function (event) {
+        if (event.target == model) {
+          model.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+/* Define a flex container */
+.container {
+  display: flex;
+  /* Align the items horizontally */
+  flex-direction: row;
+  /* Add some padding and border */
+  padding: 10px;
+  border: 20px solid green;
+}
+
+/* Define the style for the items */
+.item {
+  /* Add some margin and background color */
+  margin: 30px;
+  background-color: red;
+  /* Add some width and height */
+  width: 300px;
+  height: 200px;
+}
+.container2 {
+  margin: 20px;
+  padding: middle;
+  font-style: italic;
+}

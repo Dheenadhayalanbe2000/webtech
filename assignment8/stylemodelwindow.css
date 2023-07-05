@@ -1,0 +1,23 @@
+.model {
+  /* The model window overlay covers the entire screen */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* The model window overlay has a semi-transparent black background */
+  background-color: red;
+  /* The model window overlay is hidden by default */
+  display: none;
+}
+
+.model-content {
+  /* The model content box is centered horizontally and vertically */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* The model content box has a white background and some padding */
+  background-color: blue;
+  padding: 20px;
+}

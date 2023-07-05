@@ -1,0 +1,35 @@
+/* Define the style for the list items */
+li {
+  padding: 5px;
+  margin: 5px;
+}
+.c1 {
+  background-color: gold;
+}
+.c2 {
+  background-color: silver;
+}
+.c3 {
+  background-color: blue;
+}
+.c4 {
+  background-color: gray;
+}
+.c5 {
+  background-color: white;
+}
+.c6 {
+  background-color: yellow;
+}
+.c7 {
+  background-color: gray;
+}
+.c8 {
+  background-color: orange;
+}
+.c9 {
+  background-color: rgb(211, 199, 199);
+}
+.c10 {
+  background-color: rgb(196, 40, 13);
+}

@@ -1,0 +1,20 @@
+/* Define a flex container */
+.nav {
+  display: flex;
+  /* Align the items horizontally */
+  flex-direction: row;
+  /* Distribute the space evenly between the items */
+  justify-content: space-evenly;
+  /* Add some padding and background color */
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+/* Define the style for the links */
+.nav a {
+  /* Remove the default underline */
+  text-decoration: none;
+  /* Add some color and font size */
+  color: #333;
+  font-size: 18px;
+}
