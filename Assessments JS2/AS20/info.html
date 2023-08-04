@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Descriptin" content="Pattern printing" />
+    <title>Pattern printing</title>
+  </head>
+  <body>
+    <script>
+      // Define the number of rows for the pattern
+      const numRows = 5;
+
+      // Loop through each row and print the pattern
+      for (let i = 1; i <= numRows; i++) {
+        let pattern = "";
+
+        // Add asterisks for each column in the current row
+        for (let j = 1; j <= i; j++) {
+          pattern += "*";
+        }
+
+        // Print the pattern for the current row
+        console.log(pattern);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Descriptin" content="Tem. conv: celsius 2 fahrenheit " />
+    <title>Tem.cov: celsius 2 fahrenheit</title>
+  </head>
+  <body>
+    <script>
+      // Fahrenheit to Celsius
+      function fahrenheitToCelsius(fahrenheit) {
+        return (fahrenheit - 32) * (5 / 9);
+      }
+
+      const fahrenheitInput = parseFloat(
+        prompt("Enter the temperature in Fahrenheit:")
+      );
+
+      if (isNaN(fahrenheitInput)) {
+        alert(
+          "Invalid input. Please enter a valid number for the temperature."
+        );
+      } else {
+        const celsius = fahrenheitToCelsius(fahrenheitInput);
+
+        // Display the result
+        console.log(
+          `${fahrenheitInput} degrees Fahrenheit is equal to ${celsius.toFixed(
+            2
+          )} degrees Celsius.`
+        );
+      }
+    </script>
+  </body>
+</html>

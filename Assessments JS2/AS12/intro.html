@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Descriptin" content="vote -eligiblity" />
+    <title>voting-eligiblity</title>
+  </head>
+  <body>
+    <script>
+      const ageInput = prompt("Please enter your age:");
+
+      const age = parseInt(ageInput);
+
+      // Check if the age is a valid number
+      if (isNaN(age)) {
+        alert("Invalid input. Please enter a valid number for your age.");
+      } else {
+        if (age >= 18) {
+          alert("You are eligible to vote!");
+        } else {
+          alert("You must be 18 or older to vote.");
+        }
+      }
+    </script>
+  </body>
+</html>

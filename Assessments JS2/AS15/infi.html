@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Descriptin" content="Positive or negative alert " />
+    <title>Positive or negative alert</title>
+  </head>
+  <body>
+    <script>
+      const userInput = prompt("Please enter a number:");
+
+      const number = parseFloat(userInput);
+
+      if (isNaN(number)) {
+        alert("Invalid input. Please enter a valid number.");
+      } else {
+        // Check if the number is positive or negative
+        if (number > 0) {
+          alert("Positive");
+        } else if (number < 0) {
+          alert("Negative");
+        } else {
+          alert("The number is zero.");
+        }
+      }
+    </script>
+  </body>
+</html>

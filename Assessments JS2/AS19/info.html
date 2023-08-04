@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Descriptin" content="Calculate the factorial of given num. " />
+    <title>calculate the factorial of given num.</title>
+  </head>
+  <body>
+    <script>
+      // Function to calculate the factorial of a given number
+      function calculateFactorial(number) {
+        if (number < 0) {
+          return NaN; // Factorial is not defined for negative numbers
+        } else if (number === 0 || number === 1) {
+          return 1; // Factorial of 0 and 1 is 1
+        } else {
+          let factorial = 1;
+          let i = 2;
+
+          while (i <= number) {
+            factorial *= i;
+            i++;
+          }
+
+          return factorial;
+        }
+      }
+
+      // Sample input number
+      const number = 5;
+
+      // Calculate the factorial
+      const result = calculateFactorial(number);
+
+      // Display the result
+      console.log(`The factorial of ${number} is: ${result}`);
+    </script>
+  </body>
+</html>

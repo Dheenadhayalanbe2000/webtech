@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Descriptin"
+      content="calculate the sum of even num. from 1 to 100"
+    />
+    <title>calculate the sum of even num. from 1 to 100</title>
+  </head>
+  <body>
+    <script>
+      // Function to calculate the sum of even numbers from 1 to n
+      function sumEvenNumbers(n) {
+        let sum = 0;
+        for (let i = 2; i <= n; i += 2) {
+          sum += i;
+        }
+        return sum;
+      }
+
+      // Calculate the sum of even numbers from 1 to 100
+      const result = sumEvenNumbers(100);
+
+      // Display the result in the console
+      console.log(`The sum of all even numbers from 1 to 100 is: ${result}`);
+    </script>
+  </body>
+</html>
