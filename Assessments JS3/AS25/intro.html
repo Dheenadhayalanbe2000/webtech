@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="check same last digit" />
+    <title>check same last digit</title>
+  </head>
+  <body>
+    <script>
+      function checkSameLastDigit(num1, num2) {
+        /*
+         * Check if two numbers have the same last digit.
+         *
+         * Parameters:
+         * num1 (number): The first number.
+         * num2 (number): The second number.
+         *
+         * Returns:
+         * boolean: true if both numbers have the same last digit, false otherwise.
+         */
+        const lastDigitNum1 = num1 % 10;
+        const lastDigitNum2 = num2 % 10;
+        return lastDigitNum1 === lastDigitNum2;
+      }
+      console.log(checkSameLastDigit(5796, 896));
+      console.log(checkSameLastDigit(456, 12));
+      console.log(checkSameLastDigit(1234567, 4567));
+    </script>
+  </body>
+</html>

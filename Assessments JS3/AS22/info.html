@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Displayfav.lan." />
+    <title>display.fav.lan</title>
+  </head>
+  <body>
+    <script>
+      function displayFavoriteLanguageMessage() {
+        var favoriteLanguage = prompt(
+          "What is your favorite programming language?"
+        );
+
+        if (favoriteLanguage === "JavaScript") {
+          alert("Great choice!");
+        } else if (favoriteLanguage === "Python") {
+          alert("Excellent!");
+        } else {
+          alert("That's a good choice too!");
+        }
+      }
+
+      // Call the function to start the process
+      displayFavoriteLanguageMessage();
+    </script>
+  </body>
+</html>
