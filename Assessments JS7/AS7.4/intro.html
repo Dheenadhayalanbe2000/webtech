@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Filter" />
+    <title>filter</title>
+  </head>
+  <body>
+    <script>
+      function filterGreaterThan5(array) {
+        // Check if input is an array
+        if (!Array.isArray(array)) {
+          throw new Error("Input must be an array");
+        }
+
+        // Filter out numbers greater than 5
+        return array.filter((element) => element > 5);
+      }
+
+      // Input
+      const inputArray = [3, 8, 1, 9, 4];
+      const result = filterGreaterThan5(inputArray);
+      console.log(result); // Output: [8, 9]
+    </script>
+  </body>
+</html>

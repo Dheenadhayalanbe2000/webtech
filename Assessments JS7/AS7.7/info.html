@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    ,
+    <meta
+      name="description"
+      content="calculates the square of each number in an array"
+    />
+    <title>calculates the square of each number in an array</title>
+  </head>
+  <body>
+    <script>
+      function calculateSquare(array) {
+        // Check input is an array
+        if (!Array.isArray(array)) {
+          throw new Error("Input must be an Array");
+        }
+
+        //calulate and print teh square
+        array.forEach((Number) => {
+          const square = Number * Number;
+          console.log(square);
+        });
+      }
+      // Input
+      const inputArray = [1, 2, 3, 4, 5];
+      calculateSquare(inputArray);
+    </script>
+  </body>
+</html>

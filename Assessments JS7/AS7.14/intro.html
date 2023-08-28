@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="checks if an array contains at least one negative number. "
+    />
+    <title>checks if an array contains at least one negative number.</title>
+  </head>
+  <body>
+    <script>
+      function hasNegativeNumber(arr) {
+        return arr.some((number) => number < 0);
+      }
+
+      const inputArray = [1, 2, -3, 4, 5];
+      const output = hasNegativeNumber(inputArray);
+      console.log(output); // true
+    </script>
+  </body>
+</html>

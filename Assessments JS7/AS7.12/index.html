@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="concatenateWords" />
+    <title>concatenateWords</title>
+  </head>
+  <body>
+    <script>
+      function concatenateWords(words) {
+        const concatenatedString = words.reduceRight(
+          (accumulator, currentValue) => accumulator + currentValue,
+          ""
+        );
+        return concatenatedString;
+      }
+
+      const inputWords = ["Hello", " ", "World"];
+      const output = concatenateWords(inputWords);
+      console.log(output); // 'World Hello '
+    </script>
+  </body>
+</html>

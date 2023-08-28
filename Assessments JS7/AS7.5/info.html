@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="flattenDeepArray that flattens deeply nested arrays"
+    />
+    <title>flattenDeepArray that flattens deeply nested arrays</title>
+  </head>
+  <body>
+    <script>
+      function flattenDeepArray(array) {
+        // Check if input is an array
+        if (!Array.isArray(array)) {
+          throw new Error("Input must be an array");
+        }
+
+        // Use recursion to flatten deeply nested arrays
+        return array.reduce((acc, current) => {
+          if (Array.isArray(current)) {
+            return acc.concat(flattenDeepArray(current));
+          } else {
+            return acc.concat(current);
+          }
+        }, []);
+      }
+
+      // Input
+      const inputArray = [1, [2, [3, [4]]], 5];
+      const result = flattenDeepArray(inputArray);
+      console.log(result);
+    </script>
+  </body>
+</html>

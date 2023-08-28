@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="calculateTheCirclearea" />
+    <title>calculateTheCircleArea</title>
+  </head>
+  <body>
+    <script>
+      function calculateCirclesArea(radii) {
+        const pi = 3.14159;
+        const areas = radii.map((radius) => pi * radius * radius);
+        return areas;
+      }
+
+      const inputRadii = [1, 2, 3];
+      const outputAreas = calculateCirclesArea(inputRadii);
+      console.log(outputAreas);
+    </script>
+  </body>
+</html>

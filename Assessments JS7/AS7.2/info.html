@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="copyAndPaste" />
+    <title>copyAndPaste</title>
+  </head>
+  <body>
+    <script>
+      function copyAndPaste(array, startIndex, endIndex) {
+        // Check if input is an array
+        if (!Array.isArray(array)) {
+          throw new Error("Input must be an array");
+        }
+
+        // Check if indices are within bounds
+        if (
+          startIndex < 0 ||
+          endIndex >= array.length ||
+          startIndex > endIndex
+        ) {
+          throw new Error("Invalid indices");
+        }
+
+        // Copy the portion of the array
+        const copiedPortion = array.slice(startIndex, endIndex + 1);
+
+        // Replace the original portion with the copied portion
+        array.splice(startIndex, endIndex - startIndex + 1, ...copiedPortion);
+
+        return array;
+      }
+
+      // input
+      const inputArray = [1, 2, 3, 4, 5];
+      const startIndex = 0;
+      const endIndex = 3;
+
+      const result = copyAndPaste(inputArray, startIndex, endIndex);
+      console.log(result);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="a function replaceElements that replaces elements in an array with new values"
+    />
+    <title>
+      A function replaceElements that replaces elements in an array with new
+      values
+    </title>
+  </head>
+  <body>
+    <script>
+      function replaceElements(arr, ...replacements) {
+        const newArr = [...arr]; // Create a copy of the original array to avoid modifying it directly
+
+        replacements.forEach((newValue, index) => {
+          if (index < newArr.length) {
+            newArr[index] = newValue;
+          }
+        });
+
+        return newArr;
+      }
+
+      const inputArray = [1, 2, 3, 4, 5];
+      const output = replaceElements(inputArray, 1, 3, 6, 7);
+      console.log(output);
+    </script>
+  </body>
+</html>

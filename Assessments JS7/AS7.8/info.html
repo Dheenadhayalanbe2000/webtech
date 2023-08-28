@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="findTheFirstOccurrence" />
+    <title>findTheFirstOccurrence</title>
+  </head>
+  <body>
+    <script>
+      function findFirstOccurrence(array, element) {
+        // Check if input is an array
+        if (!Array.isArray(array)) {
+          throw new Error("Input must be an array");
+        }
+
+        // Find the index of the first occurrence
+        return array.indexOf(element);
+      }
+
+      // Input
+      const inputArray = ["apple", "banana", "cherry", "apple"];
+      const searchElement = "apple";
+      const result = findFirstOccurrence(inputArray, searchElement);
+      console.log(result); // Output: 0
+    </script>
+  </body>
+</html>

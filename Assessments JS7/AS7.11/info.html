@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="multiplyArray" />
+    <title>multiplyArray</title>
+  </head>
+  <body>
+    <script>
+      function multiplyArray(arr) {
+        if (arr.length === 0) {
+          return 1; // If the array is empty, the product is 1
+        }
+
+        const result = arr.reduce(
+          (accumulator, currentValue) => accumulator * currentValue
+        );
+        return result;
+      }
+
+      const inputArray = [2, 3, 4];
+      const output = multiplyArray(inputArray);
+      console.log(output); // 24
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="combineArrays that concatenates an array"
+    />
+    <title>combineArrays that concatenates an array</title>
+  </head>
+  <body>
+    <script>
+      function combineArrays(array1, array2) {
+        // Check if both inputs are arrays
+        if (!Array.isArray(array1) || !Array.isArray(array2)) {
+          throw new Error("Both inputs must be arrays");
+        }
+
+        // Concatenate the arrays and return the result
+        return array1.concat(array2);
+      }
+
+      //Input
+      const result = combineArrays(["a", "b"], [1, 2, 3]);
+      console.log(result);
+    </script>
+  </body>
+</html>

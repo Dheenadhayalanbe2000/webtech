@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="function - getMiddleslice" />
+    <title>function - getmiddleSlice</title>
+  </head>
+  <body>
+    <script>
+      function getMiddleSlice(arr) {
+        if (arr.length < 2) {
+          return []; // If the array has less than 2 elements, return an empty array
+        }
+
+        const middleIndex = Math.floor(arr.length / 2);
+        const middleSlice = arr.slice(middleIndex - 1, middleIndex + 1);
+        return middleSlice;
+      }
+
+      const inputArray = [1, 2, 3, 4, 5];
+      const output = getMiddleSlice(inputArray);
+      console.log(output); // [2, 3]
+    </script>
+  </body>
+</html>
