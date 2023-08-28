@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Addind and buying product in cart" />
+    <title>Adding and buying product in cart</title>
+  </head>
+  <body>
+    <script>
+      var OnlineStore = {
+        cart: [],
+        products: [
+          { name: "Product A", price: 100 },
+          { name: "Product B", price: 150 },
+          { name: "Product C", price: 200 },
+        ],
+
+        addProductToCart: function (productName) {
+          var product = this.products.find((p) => p.name === productName);
+          if (product) {
+            this.cart.push(product);
+            console.log(productName + " has been added to the cart.");
+          } else {
+            console.log(productName + " not found in the products.");
+          }
+        },
+
+        applyDiscount: function (discountPercent) {
+          for (var i = 0; i < this.cart.length; i++) {
+            var discountedPrice =
+              this.cart[i].price * (1 - discountPercent / 100);
+            this.cart[i].price = discountedPrice;
+          }
+          console.log("Discount of " + discountPercent + "% has been applied.");
+        },
+
+        calculateFinalPrice: function () {
+          var totalPrice = 0;
+          for (var i = 0; i < this.cart.length; i++) {
+            totalPrice += this.cart[i].price;
+          }
+          return totalPrice;
+        },
+      };
+
+      OnlineStore.addProductToCart("Product A");
+      OnlineStore.addProductToCart("Product C");
+
+      console.log("\nInitial Cart:");
+      console.log(OnlineStore.cart);
+
+      OnlineStore.applyDiscount(10);
+
+      console.log("\nUpdated Cart after applying discount:");
+      console.log(OnlineStore.cart);
+
+      var finalPrice = OnlineStore.calculateFinalPrice();
+      console.log("\nFinal Price: $" + finalPrice);
+    </script>
+  </body>
+</html>

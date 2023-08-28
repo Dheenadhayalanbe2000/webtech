@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Search for contacts and display" />
+    <title>search for contact and display</title>
+  </head>
+  <body>
+    <script>
+      var AddressBook = {
+        contacts: [],
+
+        addContact: function (name, phoneNumber) {
+          this.contacts.push({ name: name, phoneNumber: phoneNumber });
+          console.log(name + " has been added to the address book.");
+        },
+
+        searchContact: function (name) {
+          var foundContacts = [];
+          for (var i = 0; i < this.contacts.length; i++) {
+            if (this.contacts[i].name.toLowerCase() === name.toLowerCase()) {
+              foundContacts.push(this.contacts[i]);
+            }
+          }
+          return foundContacts;
+        },
+
+        displayAllContacts: function () {
+          console.log("All Contacts:");
+          for (var i = 0; i < this.contacts.length; i++) {
+            console.log("Name:", this.contacts[i].name);
+            console.log("Phone Number:", this.contacts[i].phoneNumber);
+            console.log("----------------------");
+          }
+        },
+      };
+
+      AddressBook.addContact("SMR", "123-456-7890");
+      AddressBook.addContact("NBS", "987-654-3210");
+
+      console.log("\nSearching for 'SMR':");
+      var searchResults = AddressBook.searchContact("SMR");
+      for (var i = 0; i < searchResults.length; i++) {
+        console.log("Name:", searchResults[i].name);
+        console.log("Phone Number:", searchResults[i].phoneNumber);
+        console.log("----------------------");
+      }
+
+      console.log("\nDisplaying all contacts:");
+      AddressBook.displayAllContacts();
+    </script>
+  </body>
+</html>

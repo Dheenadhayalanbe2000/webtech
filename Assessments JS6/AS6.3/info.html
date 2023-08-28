@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Formated message about the book" />
+    <title>Formated message about the book</title>
+  </head>
+  <body>
+    <script>
+      var book = {
+        title: "Limpert, Brake Design and Safty ",
+        author: "Warrendale, PA: Society of Automotive Engineers,1999",
+      };
+
+      function displayBookInfo(bookObj) {
+        var message =
+          "Book Title: " + bookObj.title + "\nAuthor: " + bookObj.author;
+        console.log(message);
+      }
+
+      displayBookInfo(book);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Description"
+      content="Cal. the area and circumference of the circle"
+    />
+    <title>Cal. the area and circumference of the circle</title>
+  </head>
+  <body>
+    <script>
+      var circle = {
+        radius: 34,
+
+        calculateArea: function () {
+          return Math.PI * this.radius * this.radius;
+        },
+
+        calculateCircumference: function () {
+          return 2 * Math.PI * this.radius;
+        },
+      };
+
+      var area = circle.calculateArea();
+      var circumference = circle.calculateCircumference();
+
+      console.log("Circle Area:", area);
+      console.log("Circle Circumference:", circumference);
+    </script>
+  </body>
+</html>

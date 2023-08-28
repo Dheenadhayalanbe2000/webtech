@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Full car info." />
+    <title>Full car info.</title>
+  </head>
+  <body>
+    <script>
+      var car = {
+        make: "Mahindra",
+        model: "Bolero",
+        year: "2020",
+        bodytype: "SUV",
+        seatingcapacity: "7",
+
+        displayCarInfo: function () {
+          var carInfo =
+            "Make: " +
+            this.make +
+            "\nModel: " +
+            this.model +
+            "\nYear: " +
+            this.year;
+
+          console.log(carInfo);
+        },
+      };
+
+      car.displayCarInfo();
+    </script>
+  </body>
+</html>

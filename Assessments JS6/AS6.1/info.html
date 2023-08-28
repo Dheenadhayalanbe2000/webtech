@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Intro of the person" />
+    <title>Intro of the person</title>
+  </head>
+  <body>
+    <script>
+      var person = {
+        name: "John",
+        age: 25,
+        isStudent: false,
+      };
+
+      var introduction =
+        "Hello, my name is " +
+        person.name +
+        ". I am " +
+        person.age +
+        " years old.";
+
+      if (person.isStudent) {
+        introduction += " I am a student.";
+      } else {
+        introduction += " I am not a student.";
+      }
+
+      console.log(introduction);
+    </script>
+  </body>
+</html>

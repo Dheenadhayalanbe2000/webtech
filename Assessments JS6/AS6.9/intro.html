@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Quiz game" />
+    <title>Quiz game</title>
+  </head>
+  <body>
+    <script>
+      var QuizGame = {
+        questions: [
+          {
+            question: "What is the capital of France?",
+            choices: ["Berlin", "Paris", "Madrid", "Rome"],
+            correctAnswer: 1,
+          },
+          {
+            question: "Which planet is known as the Red Planet?",
+            choices: ["Venus", "Mars", "Jupiter", "Saturn"],
+            correctAnswer: 1,
+          },
+          {
+            question: "What is the largest mammal?",
+            choices: ["Elephant", "Blue Whale", "Giraffe", "Lion"],
+            correctAnswer: 1,
+          },
+        ],
+        currentQuestionIndex: 0,
+        score: 0,
+
+        displayQuestion: function () {
+          var questionObj = this.questions[this.currentQuestionIndex];
+          console.log(questionObj.question);
+          for (var i = 0; i < questionObj.choices.length; i++) {
+            console.log(i + 1 + ". " + questionObj.choices[i]);
+          }
+        },
+
+        answerQuestion: function (userAnswer) {
+          var questionObj = this.questions[this.currentQuestionIndex];
+          if (userAnswer === questionObj.correctAnswer) {
+            console.log("Correct!");
+            this.score++;
+          } else {
+            console.log(
+              "Incorrect. The correct answer is: " +
+                questionObj.choices[questionObj.correctAnswer]
+            );
+          }
+          this.currentQuestionIndex++;
+          if (this.currentQuestionIndex < this.questions.length) {
+            this.displayQuestion();
+          } else {
+            this.displayFinalScore();
+          }
+        },
+
+        displayFinalScore: function () {
+          console.log("Quiz completed!");
+          console.log(
+            "Your score: " + this.score + " out of " + this.questions.length
+          );
+        },
+      };
+
+      // Start the quiz game
+      console.log("Welcome to the Quiz Game!");
+      QuizGame.displayQuestion();
+    </script>
+  </body>
+</html>

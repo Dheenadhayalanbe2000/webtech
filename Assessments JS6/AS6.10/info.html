@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Description"
+      content="create and deposite funds in bank account"
+    />
+    <title>create and deposit funds in bank account</title>
+  </head>
+  <body>
+    <script>
+      var Bank = {
+        accounts: [],
+
+        createAccount: function (accountHolder, initialBalance) {
+          var newAccount = {
+            accountHolder: accountHolder,
+            balance: initialBalance,
+          };
+          this.accounts.push(newAccount);
+          console.log(
+            "Account created for " +
+              accountHolder +
+              " with an initial balance of $" +
+              initialBalance
+          );
+        },
+
+        depositFunds: function (accountHolder, amount) {
+          var account = this.findAccount(accountHolder);
+          if (account) {
+            account.balance += amount;
+            console.log(
+              "$" +
+                amount +
+                " deposited to " +
+                accountHolder +
+                "'s account. New balance: $" +
+                account.balance
+            );
+          } else {
+            console.log("Account not found for " + accountHolder);
+          }
+        },
+
+        checkBalance: function (accountHolder) {
+          var account = this.findAccount(accountHolder);
+          if (account) {
+            console.log(
+              accountHolder + "'s account balance: $" + account.balance
+            );
+          } else {
+            console.log("Account not found for " + accountHolder);
+          }
+        },
+
+        findAccount: function (accountHolder) {
+          return this.accounts.find(
+            (account) => account.accountHolder === accountHolder
+          );
+        },
+      };
+
+      // Create accounts
+      Bank.createAccount("SMR", 1000);
+      Bank.createAccount("NBS", 1500);
+
+      // Deposit funds
+      Bank.depositFunds("SMR", 500);
+      Bank.depositFunds("NBS", 200);
+
+      // Check account balances
+      Bank.checkBalance("SMR");
+      Bank.checkBalance("NBS");
+    </script>
+  </body>
+</html>

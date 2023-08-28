@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Description"
+      content="calculating the total price and updating quantities"
+    />
+    <title>calculating the total price and updating quantities</title>
+  </head>
+  <body>
+    <script>
+      var Product = {
+        name: "Mobiles",
+        price: 180,
+        quantity: 5,
+
+        calculateTotalPrice: function () {
+          return this.price * this.quantity;
+        },
+
+        updateQuantity: function (newQuantity) {
+          this.quantity = newQuantity;
+        },
+      };
+
+      console.log("Product: " + Product.name);
+      console.log("Price: $" + Product.price);
+      console.log("Quantity: " + Product.quantity);
+      console.log("Total Price: $" + Product.calculateTotalPrice());
+
+      // Update the quantity and calculate the new total price
+      Product.updateQuantity(10);
+      console.log("Updated Quantity: " + Product.quantity);
+      console.log("New Total Price: $" + Product.calculateTotalPrice());
+    </script>
+  </body>
+</html>

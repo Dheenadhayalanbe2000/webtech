@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="cal. the avag. grade of the student" />
+
+    <title>cal. the avag. grade of the student</title>
+  </head>
+  <body>
+    <script>
+      var student = {
+        name: "Baby",
+        age: 20,
+        grades: [70, 75, 78, 85, 99],
+
+        calculateAverageGrade: function () {
+          var totalGrades = 0;
+          for (var i = 0; i < this.grades.length; i++) {
+            totalGrades += this.grades[i];
+          }
+          var average = totalGrades / this.grades.length;
+          return average;
+        },
+      };
+
+      var averageGrade = student.calculateAverageGrade();
+      console.log(student.name + "'s average grade:", averageGrade);
+    </script>
+  </body>
+</html>
