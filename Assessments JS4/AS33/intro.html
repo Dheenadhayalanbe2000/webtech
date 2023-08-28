@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Multiples of num. from 1 to 100" />
+    <title>Multiples of num. from 1 to 100</title>
+  </head>
+  <body>
+    <script>
+      // Prompt the user for input
+      const userInput = prompt("Enter a positive integer:");
+
+      // Convert user input to an integer
+      const number = parseInt(userInput);
+
+      // Check if the input is a positive integer
+      if (isNaN(number) || number <= 0) {
+        console.log("Invalid input. Please enter a positive integer.");
+      } else {
+        console.log(`Multiples of ${number} from 1 to 100:`);
+        for (let i = 1; i <= 100; i++) {
+          if (i % number === 0) {
+            console.log(i);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

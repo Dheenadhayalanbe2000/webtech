@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content=" Numbers that are multiples of both 7 and
+    9, display Divisible by 7 and 9. "
+    />
+    <title>
+      Numbers that are multiples of both 7 and 9, display "Divisible by 7 and
+      9".
+    </title>
+  </head>
+  <body>
+    <h2>
+      Numbers that are multiples of both 7 and 9, display "Divisible by 7 and
+      9".
+    </h2>
+    <script>
+      for (let num = 1; num <= 200; num++) {
+        let output = "";
+
+        if (num % 7 === 0) {
+          output += "Divisible by 7";
+        }
+
+        if (num % 9 === 0) {
+          if (output !== "") {
+            output += " and ";
+          }
+          output += "Divisible by 9";
+        }
+
+        if (output === "") {
+          output = num;
+        }
+
+        console.log(output);
+      }
+    </script>
+  </body>
+</html>

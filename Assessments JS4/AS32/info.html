@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="calculateDigitPowerSum" />
+    <title>calculateDigitPowerSum</title>
+  </head>
+  <body>
+    <h2>calculateDigitPowerSum</h2>
+    <script>
+      function calculateDigitPowerSum(n) {
+        if (n <= 0) {
+          throw new Error("Input must be a positive integer");
+        }
+
+        const digits = Array.from(String(n), Number); // Convert number to an array of its digits
+        let sum = 0;
+
+        for (let i = 0; i < digits.length; i++) {
+          sum += Math.pow(digits[i], i + 1);
+        }
+
+        return sum;
+      }
+
+      // Example usage
+      const number = 987;
+      const sum = calculateDigitPowerSum(number);
+      console.log(
+        `The sum of digits powered by their position for ${number} is ${sum}`
+      );
+    </script>
+  </body>
+</html>

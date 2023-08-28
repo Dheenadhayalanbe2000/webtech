@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Generating nums." />
+    <title>Generating nums.</title>
+  </head>
+  <body>
+    <h2>Generating nums.</h2>
+    <script>
+      for (let num = 1; num <= 100; num++) {
+        let output = "";
+
+        if (num % 3 === 0) {
+          output += "Skill";
+        }
+
+        if (num % 5 === 0) {
+          output += "Safari";
+        }
+
+        if (output === "") {
+          output = num;
+        }
+
+        console.log(output);
+      }
+    </script>
+  </body>
+</html>
