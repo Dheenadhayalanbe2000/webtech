@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Description"
+      content="determine which products are out of stock based on the order data for 2 map reprecenting products"
+    />
+    <title>
+      determine which products are out of stock based on the order data for 2
+      map reprecenting products
+    </title>
+  </head>
+  <body>
+    <h3>
+      determine which products are out of stock based on the order data for 2
+      map reprecenting product
+    </h3>
+    <script>
+      // Sample product inventory Map with product name as key and available quantity as value
+      const productInventory = new Map([
+        ["Romance F1", 10],
+        ["Brillyance F1", 5],
+        ["Allyance F1", 15],
+      ]);
+
+      // Sample customer orders Map with product name as key and ordered quantity as value
+      const customerOrders = new Map([
+        ["Romance F1 ", 8],
+        ["Brillyance F1", 7],
+        ["Allyance f1", 12],
+      ]);
+
+      // Create a Map to store out-of-stock products
+      const outOfStockProducts = new Map();
+
+      // Iterate through customer orders and check inventory
+      customerOrders.forEach((orderQuantity, productName) => {
+        if (
+          !productInventory.has(productName) ||
+          orderQuantity > productInventory.get(productName)
+        ) {
+          outOfStockProducts.set(productName, orderQuantity);
+        }
+      });
+
+      // Display out-of-stock products
+      if (outOfStockProducts.size === 0) {
+        console.log("All products are in stock.");
+      } else {
+        console.log("Out-of-stock products:");
+        outOfStockProducts.forEach((orderQuantity, productName) => {
+          console.log(
+            `${productName}: Ordered ${orderQuantity}, but only ${productInventory.get(
+              productName
+            )} available.`
+          );
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Description"
+      content="filter the products to get a list of items that are under a certain price threshold"
+    />
+    <title>
+      filter the products to get a list of items that are under a certain price
+      threshold?
+    </title>
+  </head>
+  <body>
+    <h2>
+      filter the products to get a list of items that are under a certain price
+      threshold?
+    </h2>
+    <script>
+      // Sample array of product objects
+      const products = [
+        { name: "GI coupling", price: 20, category: "GI hardwares" },
+        {
+          name: "Greaves Diesel engine 7.5hp",
+          price: 500,
+          category: "automobiles",
+        },
+        { name: "volvoline 15W20 oil", price: 15, category: "Lubricant" },
+        {
+          name: "Texmo EVAMJ 30 7.5hp,6 stage motor",
+          price: 450,
+          category: "Elecric motors",
+        },
+      ];
+
+      // Define the price threshold
+      const priceThreshold = 300;
+
+      // Use the filter() method to get products under the price threshold
+      const affordableProducts = products.filter(
+        (product) => product.price < priceThreshold
+      );
+
+      // Display the list of affordable products
+      console.log("Affordable products:");
+      console.log(affordableProducts);
+    </script>
+  </body>
+</html>

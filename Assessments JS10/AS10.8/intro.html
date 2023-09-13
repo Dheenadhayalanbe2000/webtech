@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Description"
+      content="a single object that represents the entire computer by combining these parts"
+    />
+    <title>
+      a single object that represents the entire computer by combining these
+      parts
+    </title>
+  </head>
+  <body>
+    <h2>
+      a single object that represents the entire computer by combining these
+      parts
+    </h2>
+    <script>
+      // Individual parts of the computer
+      const cpu = {
+        brand: "Intel",
+        cores: 8,
+        speedGHz: 3.2,
+      };
+
+      const ram = {
+        capacityGB: 16,
+        type: "DDR4",
+      };
+
+      const gpu = {
+        brand: "NVIDIA",
+        model: "GeForce RTX 3080",
+        vramGB: 10,
+      };
+
+      // Create a computer object by combining the parts
+      const computer = {
+        cpu,
+        ram,
+        gpu,
+      };
+
+      // Accessing computer properties
+      console.log("Computer Brand:", computer.cpu.brand);
+      console.log("RAM Capacity:", computer.ram.capacityGB, "GB");
+      console.log("GPU Model:", computer.gpu.model);
+    </script>
+  </body>
+</html>

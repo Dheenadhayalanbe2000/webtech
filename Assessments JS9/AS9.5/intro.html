@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Description"
+      content="create a map where the keys are the numbers and the values are their squares. "
+    />
+    <title>
+      create a map where the keys are the numbers and the values are their
+      squares.
+    </title>
+  </head>
+  <body>
+    <h2>
+      create a map where the keys are the numbers and the values are their
+      squares.
+    </h2>
+    <script>
+      function createSquareMap(numbers) {
+        const squareMap = {};
+
+        // Iterate through the array of numbers.
+        for (const num of numbers) {
+          // Calculate the square of the number and add it to the map.
+          squareMap[num] = num * num;
+        }
+
+        return squareMap;
+      }
+
+      const inputArray = [2, 3, 4, 5];
+      const squareMap = createSquareMap(inputArray);
+
+      console.log(squareMap);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Description"
+      content=" Create a set of colors and then add more colors to it"
+    />
+    <title>Create a set of colors and then add more colors to it</title>
+  </head>
+  <body>
+    <h3>Create a set of colors and then add more colors to it</h3>
+    <script>
+      // Step 1: Create a Set of colors.
+      const colorsSet = new Set(["red", "green", "yellow"]);
+
+      // Step 2: Add more colors to the Set.
+      colorsSet.add("blue");
+      colorsSet.add("purple");
+
+      // Step 3: Check if a specific color exists in the Set (e.g., "blue").
+      const colorToCheck = "blue";
+      if (colorsSet.has(colorToCheck)) {
+        console.log(`Color "${colorToCheck}" exists in the set`);
+      } else {
+        console.log(`Color "${colorToCheck}" does not exist in the set`);
+      }
+    </script>
+  </body>
+</html>

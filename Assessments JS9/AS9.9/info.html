@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Description"
+      content=" program to determine if a given string is a pangram using set"
+    />
+    <title>program to determine if a given string is a pangram using set</title>
+  </head>
+  <body>
+    <h2>program to determine if a given string is a pangram using set</h2>
+    <script>
+      function isPangram(inputString) {
+        // Create a set to store the unique characters in the string.
+        const charSet = new Set();
+
+        // Remove spaces and convert the string to lowercase for case insensitivity.
+        const cleanedString = inputString.replace(/\s/g, "").toLowerCase();
+
+        // Iterate through the characters in the cleaned string and add them to the set.
+        for (const char of cleanedString) {
+          charSet.add(char);
+        }
+
+        // Check if the set size is equal to the number of English letters (26).
+        return charSet.size === 26;
+      }
+
+      const inputString = "The quick brown fox jumps over the lazy dog";
+      const result = isPangram(inputString);
+
+      if (result) {
+        console.log("It is a pangram.");
+      } else {
+        console.log("It is not a pangram.");
+      }
+    </script>
+  </body>
+</html>

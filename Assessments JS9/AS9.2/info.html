@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="map of student names and their scores" />
+    <title>map of student names and their scores</title>
+  </head>
+  <body>
+    <script>
+      const scores = {
+        Alice: 85,
+        Bob: 92,
+        Charlie: 78,
+        David: 95,
+      };
+
+      let highestScore = -1; // Initialize with a value lower than any possible score.
+      let studentWithHighestScore = "";
+
+      // Iterate through the object to find the student with the highest score.
+      for (const student in scores) {
+        if (scores.hasOwnProperty(student)) {
+          const score = scores[student];
+          if (score > highestScore) {
+            highestScore = score;
+            studentWithHighestScore = student;
+          }
+        }
+      }
+
+      console.log(
+        `${studentWithHighestScore} has the highest score of ${highestScore}`
+      );
+    </script>
+  </body>
+</html>

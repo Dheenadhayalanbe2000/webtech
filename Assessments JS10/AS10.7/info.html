@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Description"
+      content=" retrieve the number of books in a specific genre"
+    />
+    <title>retrieve the number of books in a specific genre</title>
+  </head>
+  <body>
+    <h2>retrieve the number of books in a specific genre</h2>
+    <script>
+      // Sample library catalog object
+      const libraryCatalog = {
+        Fiction: [
+          { title: "Book 1", author: "Author A" },
+          { title: "Book 2", author: "Author B" },
+          { title: "Book 3", author: "Author A" },
+        ],
+        "Science Fiction": [
+          { title: "SF Book 1", author: "Author X" },
+          { title: "SF Book 2", author: "Author Y" },
+        ],
+        Mystery: [{ title: "Mystery Book 1", author: "Author M" }],
+      };
+
+      // Define the genre for which you want to retrieve the number of books
+      const genreToCount = "Fiction"; // Change this to the desired genre
+
+      // Check if the genre exists in the library catalog
+      if (libraryCatalog.hasOwnProperty(genreToCount)) {
+        const numberOfBooks = libraryCatalog[genreToCount].length;
+        console.log(`Number of books in "${genreToCount}": ${numberOfBooks}`);
+      } else {
+        console.log(
+          `Genre "${genreToCount}" not found in the library catalog.`
+        );
+      }
+    </script>
+  </body>
+</html>

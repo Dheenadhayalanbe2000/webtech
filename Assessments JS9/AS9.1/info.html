@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content=" map to store the prices of items" />
+    <title>map to store the prices of items</title>
+  </head>
+  <body>
+    <script>
+      // Step 1: Create an empty object to store the prices of items.
+      const itemPrices = {};
+
+      // Step 2: Add items and their prices to the object.
+      itemPrices["Apple"] = 1.5;
+      itemPrices["Banana"] = 0.75;
+      itemPrices["Orange"] = 1.25;
+      itemPrices["Grapes"] = 2.0;
+
+      // Step 3: Retrieve the price of a specific item (e.g., "Apple").
+      const itemToRetrieve = "Apple";
+      if (itemToRetrieve in itemPrices) {
+        const price = itemPrices[itemToRetrieve];
+        console.log(`Price of "${itemToRetrieve}" is $${price.toFixed(2)}`);
+      } else {
+        console.log(`${itemToRetrieve} is not in the list of items.`);
+      }
+
+      // Step 4 (Optional): You can add more items and prices as needed.
+      itemPrices["Pear"] = 1.75;
+      itemPrices["Pineapple"] = 2.5;
+    </script>
+  </body>
+</html>

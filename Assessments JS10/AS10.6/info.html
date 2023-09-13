@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Description"
+      content=" how can you find the employee with the highest salary"
+    />
+    <title>how can you find the employee with the highest salary</title>
+  </head>
+  <body>
+    <h1>how can you find the employee with the highest salary</h1>
+    <script>
+      // Sample Map of employee names and salaries
+      const employeeSalaries = new Map([
+        ["Dharnish", 500],
+        ["Anwar", 600],
+        ["Chandru", 750],
+        ["Divagar", 550],
+      ]);
+
+      // Initialize variables to store the employee with the highest salary
+      let highestSalaryEmployee = "";
+      let highestSalary = -1; // Initialize with a value lower than any possible salary
+
+      // Iterate through the Map's entries to find the employee with the highest salary
+      for (const [employee, salary] of employeeSalaries.entries()) {
+        if (salary > highestSalary) {
+          highestSalary = salary;
+          highestSalaryEmployee = employee;
+        }
+      }
+
+      // Display the employee with the highest salary
+      console.log(
+        `Employee with the highest salary: ${highestSalaryEmployee} ($${highestSalary})`
+      );
+    </script>
+  </body>
+</html>

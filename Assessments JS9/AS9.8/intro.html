@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="find the common elements between them" />
+    <title>find the common elements between them</title>
+  </head>
+  <body>
+    <h3>find the common elements between them</h3>
+    <script>
+      // Step 1: Define the two sets.
+      const setA = new Set([1, 2, 3, 4, 5]);
+      const setB = new Set([3, 4, 5, 6, 7]);
+
+      // Step 2: Find the common elements using the intersection operation.
+      const commonElements = new Set(
+        [...setA].filter((element) => setB.has(element))
+      );
+
+      // Step 3: Convert the common elements Set to an array for better printing.
+      const commonElementsArray = [...commonElements];
+
+      // Step 4: Print the common elements.
+      console.log("Common elements:", commonElementsArray.join(", "));
+    </script>
+  </body>
+</html>

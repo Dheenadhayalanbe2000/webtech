@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Description"
+      content="calculate the total revenue generated from these transactions"
+    />
+    <title>
+      calculate the total revenue generated from these transactions?
+    </title>
+  </head>
+  <body>
+    <h2>calculate the total revenue generated from these transactions?</h2>
+    <script>
+      // Sample array of sales transactions
+      const salesTransactions = [
+        { product: "Sprayers", quantity: 2, price: 899 },
+        { product: "Bags", quantity: 3, price: 49 },
+        { product: "Seeds", quantity: 5, price: 15 },
+        { product: "Tools", quantity: 1, price: 99 },
+      ];
+
+      // Initialize a variable to store the total revenue
+      let totalRevenue = 0;
+
+      // Calculate the total revenue by iterating through the transactions
+      for (const transaction of salesTransactions) {
+        const { quantity, price } = transaction;
+        totalRevenue += quantity * price;
+      }
+
+      // Display the total revenue
+      console.log(`Total revenue generated: $${totalRevenue}`);
+    </script>
+  </body>
+</html>

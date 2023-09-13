@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="map of words and their meanings" />
+    <title>map of words and their meanings</title>
+  </head>
+  <body>
+    <script>
+      // Create a dictionary of words and their meanings.
+      const wordMeanings = {
+        industrious: "hard-working and diligent",
+        perceptive: "having or showing keenness of insight",
+
+        // Add more words and meanings as needed.
+      };
+
+      // Prompt the user to input a word.
+      const userInput = prompt("Enter a word to get its meaning:");
+
+      // Convert the user input to lowercase to make it case-insensitive.
+      const wordToLookup = userInput.toLowerCase();
+
+      // Check if the word is in the dictionary.
+      if (wordToLookup in wordMeanings) {
+        const meaning = wordMeanings[wordToLookup];
+        console.log(`Meaning of "${wordToLookup}" is "${meaning}"`);
+      } else {
+        console.log(`The word "${wordToLookup}" is not in the dictionary.`);
+      }
+    </script>
+  </body>
+</html>

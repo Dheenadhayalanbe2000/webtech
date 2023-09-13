@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Description"
+      content="Remove duplicate values from an array using a set"
+    />
+    <title>Remove duplicate values from an array using a set</title>
+  </head>
+  <body>
+    <h2>Remove duplicate values from an array using a set</h2>
+    <script>
+      const inputArray = [1, 2, 3, 2, 4, 1];
+
+      // Create a Set from the inputArray to remove duplicates.
+      const uniqueSet = new Set(inputArray);
+
+      // Convert the Set back to an array.
+      const uniqueArray = Array.from(uniqueSet);
+
+      console.log(uniqueArray);
+    </script>
+  </body>
+</html>

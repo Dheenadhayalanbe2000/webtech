@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Description"
+      content="total number of cars of a specific make in the array"
+    />
+    <title>total number of cars of a specific make in the array?</title>
+  </head>
+  <body>
+    <script>
+      // Sample array of car objects
+      const cars = [
+        { make: "Toyota", model: "Camry", year: 2020 },
+        { make: "Honda", model: "Civic", year: 2019 },
+        { make: "Toyota", model: "Corolla", year: 2021 },
+        { make: "Ford", model: "Focus", year: 2019 },
+        { make: "Toyota", model: "Rav4", year: 2020 },
+      ];
+
+      // Function to count cars of a specific make
+      function countCarsByMake(carsArray, makeToCount) {
+        let count = 0;
+
+        for (const car of carsArray) {
+          if (car.make === makeToCount) {
+            count++;
+          }
+        }
+
+        return count;
+      }
+
+      const makeToCount = "Toyota"; // Replace with the desired make
+      const totalCount = countCarsByMake(cars, makeToCount);
+
+      console.log(`Total number of ${makeToCount} cars: ${totalCount}`);
+    </script>
+  </body>
+</html>

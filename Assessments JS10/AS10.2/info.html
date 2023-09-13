@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Description"
+      content=" use a Map to calculate the average grade for each student"
+    />
+    <title>use a Map to calculate the average grade for each student</title>
+  </head>
+  <body>
+    <h1>use a Map to calculate the average grade for each student</h1>
+    <script>
+      // Sample array of student objects
+      const students = [
+        { name: "Thanga", grades: [85, 90, 78] },
+        { name: "Revi", grades: [92, 88, 94] },
+        { name: "Sathish", grades: [78, 85, 80] },
+      ];
+
+      // Create a Map to store student names as keys and their average grades as values
+      const averageGradesMap = new Map();
+
+      // Calculate the average grade for each student and store it in the Map
+      students.forEach((student) => {
+        const { name, grades } = student;
+        const averageGrade =
+          grades.reduce((sum, grade) => sum + grade, 0) / grades.length;
+        averageGradesMap.set(name, averageGrade);
+      });
+
+      // Display the average grades for each student
+      averageGradesMap.forEach((averageGrade, name) => {
+        console.log(`${name}'s average grade: ${averageGrade.toFixed(2)}`);
+      });
+    </script>
+  </body>
+</html>
